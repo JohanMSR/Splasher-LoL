@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://json.schemastore.org/docker-compose.json
+name: splasher-lol
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
